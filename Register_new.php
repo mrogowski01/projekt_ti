@@ -9,7 +9,7 @@ class Register_new extends Register {
       parent::__construct() ;  
 	  session_set_cookie_params([
             'lifetime' => 360,
-            'path' => '/~0rogowski/',                
+            'path' => '/',                
             'domain' => $_SERVER['HTTP_HOST'],
             'secure' => false,                 
             'httponly' => false,
