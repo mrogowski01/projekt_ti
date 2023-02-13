@@ -1,8 +1,10 @@
 <?php
   
-function __autoload($class_name) {
-    include $class_name . '.php' ;
+function my_autoloader($class_name) {
+    include $class_name . '.php';
 }
+
+spl_autoload_register('my_autoloader');
  
 $reg = new Register_new;
 $reg->_read();

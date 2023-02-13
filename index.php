@@ -1,10 +1,18 @@
-<?php 
-function spl_autoload_register($class_name) {
+<?php
+
+// function __autoload($class_name) {
+//     include $class_name . '.php';
+// }
+
+function my_autoloader($class_name) {
     include $class_name . '.php';
 
     $user = new Register_new;
-    
-} ?>
+}
+
+spl_autoload_register('my_autoloader');
+
+?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
